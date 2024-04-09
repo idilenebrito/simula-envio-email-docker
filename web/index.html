@@ -7,6 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Email Sender</title>
     <style>
+        *{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        body  {
+            background-color: rgba(221, 237, 213, 0.33);
+            display: grid;
+            justify-content: center;
+            justify-items: center
+        }
+
         label {
             display: block;
         }
@@ -14,12 +24,30 @@
         textarea,
         input {
             width: 400px;
+            padding: 8px;
+            margin-bottom: 16px;
+            margin-top: 4px;
+            border-radius: 4px;
+            background-color: rgba(248, 250, 247, 0.978);
+        }
+
+        button{
+            padding: 8px 16px;
+            background-color: rgb(82, 161, 82);
+            border: none;
+            border-radius: 4px;
+            color: rgb(239, 247, 233);
+            width: 100%;
+            cursor: pointer;
+            font-size: medium;
+            font-weight: 600;
+            
         }
     </style>
 </head>
 
 <body class="container">
-    <h1>E-mail Sender</h1>
+    <h1>Envio de e-mails</h1>
     <form action="http://localhost:8000/api" method="POST">
         <div>
             <label for="assunto">Assunto</label>

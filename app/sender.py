@@ -31,14 +31,14 @@ class Sender(Bottle):
     msg = {'assunto': assunto, 'mensagem': mensagem}
     self.fila.rpush('sender', json.dumps(msg))
     
-    print('Mensagem registrada !')
+    print('Mensagem registrada!')
     
   def send(self):
     assunto = request.forms.get('assunto')
     mensagem = request.forms.get('mensagem')
     self.register_message(assunto, mensagem)
     
-    return 'Mensagem enfileirada ! Assunto: {} Mensagem: {}'.format(
+    return 'Mensagem enfileirada! Assunto: {} Mensagem: {}'.format(
     assunto, mensagem)
     
 if __name__ == '__main__':
